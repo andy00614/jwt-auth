@@ -18,3 +18,8 @@ npm install mongoose
 
 ## 6.添加json的middleware
 app.use(express.json())
+
+## 7.body-parse记得要再利用路由中间件前加上，否则会读取不到body
+
+## 8.安装hapi/joi
+npm install @hapi/joi

@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
+const bodyParser = require('body-parser')
+
 
 dotenv.config()
 
@@ -17,6 +19,10 @@ const authRoute = require('./routes/auth')
 
 // Route Middleware
 // 相当于后面的请求都带此前缀，类似于baseURL
+
+app.use(bodyParser.json())
+
+
 app.use('/api/user', authRoute)
 
 // Middleware
