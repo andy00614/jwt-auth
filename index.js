@@ -19,4 +19,7 @@ const authRoute = require('./routes/auth')
 // 相当于后面的请求都带此前缀，类似于baseURL
 app.use('/api/user', authRoute)
 
+// Middleware
+app.use(express.json())
+
 app.listen(3000,() => console.log('Server Up and running!'))
